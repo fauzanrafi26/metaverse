@@ -1,0 +1,496 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* Header */
+.background-image {
+  background-image: url(img/VR.jpg);
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.background-image::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(99, 29, 131, 0.336));
+  position: absolute;
+  bottom: 0;
+}
+
+.judul {
+  position: absolute;
+  top: 150px;
+  z-index: 2;
+}
+
+.container-text .text {
+  color: rgba(255, 255, 255, 0);
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  font-size: 5em;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 700;
+  color: white;
+  transition: 0.2s;
+  text-shadow: 0 0 5px #fff, 0 0 25px #fff, 0 0 50px #fff, 0 0 100px #fff;
+}
+
+.container-sub-text .sub-text {
+  color: white;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.desc {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  z-index: 3;
+}
+
+.name {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9em;
+  letter-spacing: 2px;
+}
+
+.kelas {
+  color: white;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Video */
+.container-1 {
+  width: 100%;
+  height: 650px;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  position: relative;
+}
+
+.container-1::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  top: 230px;
+  background-color: rgb(20, 81, 248);
+  z-index: 10;
+  animation: toRight 7s infinite;
+  border-radius: 20px;
+}
+
+@keyframes toRight {
+  0% {
+    width: 0;
+    margin-left: 100px;
+    color: rgb(0, 0, 0);
+  }
+  50% {
+    width: 273px;
+  }
+  100% {
+    width: 0;
+    margin-left: 100px;
+  }
+}
+
+/* Container Text Left */
+.container-text-left {
+  z-index: 2;
+}
+
+.container-text-left .text h1 {
+  font-family: 'Poppins', sans-serif;
+  margin: 100px 0 0 100px;
+  font-size: 3em;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.container-text-left .text h1:hover .meta {
+  color: rgb(20, 81, 248);
+  -webkit-text-stroke: 0 rgb(20, 81, 248);
+  transition: 0.5s ease-out;
+}
+.container-text-left .text h1:hover .verse {
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  transition: 0.3s ease-in-out;
+}
+
+.container-text-left .text p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.1em;
+  margin: 20px 0 0 100px;
+}
+
+.container-text-left .text .verse {
+  color: rgb(20, 81, 248);
+}
+
+.container-text-left .text .meta {
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.685);
+}
+
+.container-text-left .text .pengertian {
+  line-height: 1.7em;
+}
+
+.container-text-left .wikipedia {
+  text-decoration: none;
+  color: rgb(0, 4, 255);
+  transition: 0.3s;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.container-text-left .wikipedia:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+}
+
+.container-text-left .petunjuk {
+  line-height: 1.7em;
+}
+
+/* Container Video Right */
+.container-video-right {
+  z-index: 2;
+}
+
+.video-play {
+  margin: 100px 100px 0 20px;
+}
+
+.video-play iframe {
+  border-radius: 15px;
+  box-shadow: 0 15px 10px rgba(47, 123, 194, 0.26);
+}
+
+.meta-logo img {
+  width: 500px;
+  height: 200px;
+}
+
+/* Tanggapan 1 */
+.container-tanggapan {
+  margin-top: -5px;
+  background-color: #1c6dd0;
+  height: 800px;
+}
+
+.image-meta {
+  display: grid;
+  justify-content: center;
+}
+
+.image-meta img {
+  width: 600px;
+  height: 340px;
+  margin-top: -100px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 10px 10px rgba(36, 32, 32, 0.432);
+  animation: topbottom 2s infinite;
+}
+
+@keyframes topbottom {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: 20px;
+  }
+  75% {
+    top: 0;
+  }
+  100% {
+    top: 20;
+  }
+}
+
+.image-meta p {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-top: 40px;
+  color: white;
+}
+
+.pertanyaan-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.pertanyaan-1 h1 {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 30px;
+  font-size: 1.9em;
+  color: #1c6dd0;
+  border-radius: 15px;
+  padding: 5px 20px;
+  background-color: white;
+}
+
+.teks-tanggapan {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+.teks-tanggapan p {
+  font-family: 'Poppins', sans-serif;
+  line-height: 2em;
+  margin: 10px 20px;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.356);
+  transition: 0.3s;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 1.1em;
+}
+
+.teks-tanggapan::before {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  width: 700px;
+  height: 8px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  animation: gantiwarna 6s infinite;
+}
+
+@keyframes gantiwarna {
+  0% {
+    width: 0px;
+    color: white;
+  }
+  50% {
+    width: 700px;
+    color: #1c6dd0;
+  }
+  100% {
+    width: 0;
+    color: white;
+  }
+}
+
+.teks-tanggapan p:hover {
+  background-color: white;
+  color: #1c6dd0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.308);
+}
+
+/* Naga */
+.naga {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-left: 100px;
+  margin-top: -250px;
+}
+
+/* Tanggapan 2 */
+.tanggapan-2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-bottom: 30px;
+  margin-bottom: 100px;
+}
+.container-left {
+  position: relative;
+}
+
+.container-left img {
+  width: 500px;
+  height: 300px;
+  margin: 50px 0 0 90px;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px rgba(29, 29, 29, 0.322);
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.container-left img:hover {
+  transform: scale(1.1);
+}
+
+.container-right {
+  background-color: #1c6dd0;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.container-right h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8em;
+  margin-top: 40px;
+  margin-left: 40px;
+  color: #ffffff;
+  background-color: #222831;
+  padding-left: 20px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.container-right .p-1 {
+  margin: 30px 100px 0 40px;
+  letter-spacing: 2px;
+  background-color: #041c32;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05em;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.349);
+  transition: 0.6s;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.603);
+}
+
+.container-right p:hover {
+  transform: scale(1.2);
+  box-shadow: 0 10px 50px rgb(255, 255, 255);
+}
+
+/* Kesimpulan */
+.kesimpulan-bg {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 300px;
+}
+
+.container-kanan {
+  order: 2;
+  background-color: white;
+}
+
+.container-kiri {
+  order: 1;
+  background-color: #222831;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.container-kanan img {
+  width: 500px;
+  height: 350px;
+  border-radius: 15px;
+  margin-left: 70px;
+  margin-top: 50px;
+  box-shadow: 0 15px 15px rgba(20, 18, 131, 0.288);
+}
+
+.container-kanan p {
+  color: rgb(0, 0, 0);
+  font-family: 'Poppins';
+  margin-top: 20px;
+  margin-left: 250px;
+}
+
+.container-kiri h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8em;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.container-teks-kesimpulan p {
+  color: #ffffff;
+  margin-top: 40px;
+  background-color: #1c6dd0;
+  border-bottom-right-radius: 30px;
+  height: 400px;
+  z-index: 2;
+  padding: 40px;
+  letter-spacing: 2px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+}
+
+/* Penutup */
+.ucapan {
+  margin-top: 350px;
+  height: 400px;
+}
+
+.container-ucapan {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.container-ucapan h1 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 3px;
+  color: #1c6dd0;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.instagram {
+  margin-top: 30px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.instagram img {
+  width: 50px;
+  height: 50px;
+}
+
+.instagram a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.4em;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tiktok {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.tiktok img {
+  width: 50px;
+  height: 50px;
+}
+
+.tiktok a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.4em;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+}
